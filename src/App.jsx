@@ -51,7 +51,7 @@ function App() {
       <section>
         <h2>Kurs: {course.name}</h2>
         <p>Nauczyciel: {course.teacher}</p>
-        <p>Ile trwa: {course.hours / 24}d</p>
+        <p>Ile trwa: {Math.ceil(course.hours / 24)}d</p>
         <p>Skończony: <span className={!course.completed ? 'big-red' : ''}>{course.completed.toString()}</span></p>
       </section>
     </div>
