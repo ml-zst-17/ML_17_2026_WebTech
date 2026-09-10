@@ -17,6 +17,12 @@
   }
 }
 
+.big-red {
+  color: red;
+  font-size: larger;
+  font-weight: bold;
+}
+
 .hero {
   position: relative;
 
