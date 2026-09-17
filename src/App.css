@@ -188,3 +188,14 @@
     border-right-color: var(--border);
   }
 }
+
+nav > ul {
+  background-color: var(--accent-bg);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}

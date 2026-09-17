@@ -6,11 +6,14 @@ import Technology from './components/Technology';
 import Footer from './components/Footer';
 import Student from './components/Student';
 import InfoBox from './components/InfoBox';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <>
       <Header />
+
+      <Navigation />
 
       <main>
         <Technology />
