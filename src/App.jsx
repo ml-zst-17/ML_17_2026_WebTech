@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Technology from './components/Technology';
 import Footer from './components/Footer';
 import Student from './components/Student';
+import InfoBox from './components/InfoBox';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Technology />
 
         <Student />
+
+        <InfoBox />
       </main>
       
       <Footer />
