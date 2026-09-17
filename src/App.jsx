@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import Student from './components/Student';
 import InfoBox from './components/InfoBox';
 import Navigation from './components/Navigation';
+import Technologies from './components/Technologies';
+import CourseCard from './components/CourseCard';
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
       <Navigation />
 
       <main>
+        <Technologies />
+
+        <CourseCard />
+
         <Technology />
         <Technology />
         <Technology />
