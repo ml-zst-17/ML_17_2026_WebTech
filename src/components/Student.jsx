@@ -1,16 +1,11 @@
-function Student() {
-    const studentData = {
-        'name': 'Michele Łaba',
-        'className': '4P',
-        'specialization': 'Programista',
-    };
-
+function Student({ name, className, age, specialization }) {
     return (
-        <div>
-            <h3>Student: {studentData.name}</h3>
-            <p>Klasa: {studentData.className}</p>
-            <p>Specjalizacja: {studentData.specialization}</p>
-        </div>
+        <section>
+            <h2>Uczeń: {name}</h2>
+            <p>Klasa: {className}</p>
+            <p>Wiek: {age}</p>
+            <p>Specjalizacja: {specialization}</p>
+        </section>
     );
 }
 
