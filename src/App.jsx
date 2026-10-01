@@ -3,10 +3,9 @@
 import './App.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Navigation from './components/Navigation';
 import Technologies from './components/Technologies';
-import Student from './components/Student';
-import Book from './components/Book';
+import Technology from './components/Technology';
+import Product from './components/Product';
 
 function App() {
   const technologies = [
@@ -42,83 +41,36 @@ function App() {
     },
   ];
 
-  const students = [
-    {
-      id: 1,
-      name: "Anna",
-      className: "4P",
-      age: 17,
-      specialization: "Front-end",
-    },
-    {
-      id: 2,
-      name: "Jan",
-      className: "4P",
-      age: 18,
-      specialization: "Back-end",
-    },
-    {
-      id: 3,
-      name: "Adam",
-      className: "4P",
-      age: 18,
-      specialization: "Cyber security",
-    },
-    {
-      id: 4,
-      name: "Maciej",
-      className: "4P",
-      age: 17,
-      specialization: "Embedded programming",
-    },
-  ];
+  function selectTechnology(name) {
+    console.log(`Wybrano: ${name}`);
+  }
 
-  const books = [
-    { id: 1, title: "Wiedźmin", author: "Andrzej Sapkowski" },
-    { id: 2, title: "Hobbit", author: "J.R.R. Tolkien" },
-    { id: 3, title: "Lalka", author: "Bolesław Prus" },
-  ];
+  function selectProduct(name) {
+    console.log(`Wybrany produkt: ${name}`);
+  }
 
   return (
     <>
       <Header />
 
       <main>
-        <Technologies technologies={technologies} />
-
         {
-          students.map(student => (
-            <Student
-              key={student.id}
-              name={student.name}
-              className={student.className}
-              age={student.age}
-              specialization={student.specialization}
+          technologies.map(technology => (
+            <Technology
+              key={technology.id}
+              name={technology.name}
+              category={technology.category}
+              hours={technology.hours}
+              onSelect={selectTechnology}
             />
           ))
         }
 
-        {
-          books.map(book => (
-            <Book
-              key={book.id}
-              title={book.title}
-              author={book.author}
-            />
-          ))
-        }
-
-        {
-          books.map(book => {
-            return (
-              <Book
-                key={book.id}
-                title={book.title}
-                author={book.author}
-              />
-            );
-          })
-        }
+        <Product
+          name={"Pomidor (kg)"}
+          price={"5zł"}
+          onSelect={selectProduct}
+        />
       </main>
       
       <Footer />
