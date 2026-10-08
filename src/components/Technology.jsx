@@ -1,13 +1,11 @@
-function Technology({ name, category, hours, onSelect }) {
+function Technology({ name, img, category, hours }) {
   return (
-    <section>
-      <h2>{name}</h2>
-      <p>Kategoria: {category}</p>
+    <div className="card">
+      <img src={`/images/${img}`} alt={name} />
+      <h3>{name}</h3>
+      <p>{category}</p>
       <p>Liczba godzin: {hours}h</p>
-      <button onClick={() => onSelect(name)}>
-        Pokaż informacje
-      </button>
-    </section>
+    </div>
   );
 }
 
